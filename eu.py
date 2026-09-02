@@ -340,7 +340,7 @@ def visualize_timeline_for_streamlit(timeline_data: list, act_name: str) -> plt.
     if not timeline_data:
         raise ValueError("No hay datos de timeline para visualizar")
     
-    fig, ax = plt.subplots(figsize=(10, 4.5))
+    fig, ax = plt.subplots(figsize=(14, 7), dpi=150)
     
     # Preparar datos usando pandas Timestamp
     cwp_dates = sorted([

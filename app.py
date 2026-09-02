@@ -64,7 +64,7 @@ if st.sidebar.button("🔄 Live Data Refresh", use_container_width=True):
     st.rerun()
 
 st.sidebar.markdown("---")
-st.sidebar.info("💡 **Tip:** Use the button above to fetch fresh data directly from the official EU Law Tracker with automatic local fallback.")
+st.sidebar.info("💡 **Tip:** Use the button above to fetch fresh data directly from the official EU Law Tracker.")
 
 st.subheader(f"{selected_name} (`{procedure_code}`)")
 
@@ -94,7 +94,7 @@ if timeline_data:
     st.write("")
 
     # 📖 CIVIC CONTEXT / GLOSSARY EXPANDER
-    with st.expander("📖 What do these Brussels terms mean? (Civic Context & Glossary)"):
+    with st.expander("📖 What do these Brussels terms mean?"):
         st.markdown("""
         - **Council Working Party (CWP):** Technical groups where national diplomats dissect the proposal line by line.
         - **Coreper:** Committee of Permanent Representatives (Ambassadors). They iron out political deals before ministerial votes.
@@ -142,7 +142,7 @@ if timeline_data:
         )
         
     with tab_tabla:
-        st.markdown("### 📅 Dossier Chronology")
+        st.markdown("### 📅 Act Chronology")
         st.dataframe(df_timeline[["Legislative Milestone", "Date"]], use_container_width=True, hide_index=True)
         
     with tab_grafica:
